@@ -1,6 +1,6 @@
 {
   "name": "@remyar/react-store",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "author": "Remy ARNAUDIN <remy.arnaudin@wanadoo.fr>",
   "license": "MIT",
   "description": "Store Provider for react",
