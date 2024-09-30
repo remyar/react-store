@@ -3,11 +3,6 @@ import GlobalState from './GlobalState'
 
 class Broadcast extends Component {
 
-    static childContextTypes = {
-        globalState: PropTypes.object.isRequired,
-        createSetGlobalState: PropTypes.func.isRequired
-    }
-
     globalState = new GlobalState(this.props.globalState)
 
     getChildContext() {
