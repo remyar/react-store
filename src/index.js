@@ -1,9 +1,14 @@
 
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import Broadcast from './Broadcast'
 import withStoreProvider from './withStoreProvider';
 
 class Provider extends Component {
+
+    static propTypes = {
+        globalState: PropTypes.object.isRequired
+    }
 
     constructor(props) {
         super(props);

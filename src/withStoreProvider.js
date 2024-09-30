@@ -1,7 +1,13 @@
 import React, { Component, useEffect } from 'react'
+import PropTypes from 'prop-types'
 
 const withStoreProvider = WrappedComponent => {
     class withStoreProvider extends Component {
+
+        static contextTypes = {
+            globalState: PropTypes.object.isRequired,
+            createSetGlobalState: PropTypes.func.isRequired
+        }
 
         state = null;
 
