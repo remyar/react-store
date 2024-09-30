@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import Broadcast from './Broadcast'
 import withStoreProvider from './withStoreProvider';
 
-class Provider extends Component {
+class StoreProvider extends Component {
 
     static propTypes = {
         globalState: PropTypes.object.isRequired
@@ -70,4 +70,4 @@ class Provider extends Component {
 }
 
 export { withStoreProvider };
-export default Provider
+export default StoreProvider
