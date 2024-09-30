@@ -23,9 +23,9 @@ class Broadcast extends Component {
         }
     }
 
-   /* componentWillReceiveProps(nextProps) {
-        this.globalState.setState(nextProps.globalState)
-    }*/
+    /* componentWillReceiveProps(nextProps) {
+         this.globalState.setState(nextProps.globalState)
+     }*/
 
     render() {
         this.globalState.setState(this.props.globalState)

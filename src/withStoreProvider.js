@@ -1,8 +1,7 @@
-import React, { Component, useEffect } from 'react'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
-export default (WrappedComponent) => {
-    
+const withStoreProvider = WrappedComponent => {
     class withStoreProvider extends Component {
 
         static contextTypes = {
@@ -33,3 +32,5 @@ export default (WrappedComponent) => {
 
     return withStoreProvider
 }
+
+export default withStoreProvider

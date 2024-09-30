@@ -1,11 +1,10 @@
 
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
-import Broadcast from './Broadcast'
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import Broadcast from './Broadcast';
 import withStoreProvider from './withStoreProvider';
 
 class StoreProvider extends Component {
-
     static propTypes = {
         globalState: PropTypes.object.isRequired
     }
@@ -14,8 +13,8 @@ class StoreProvider extends Component {
         super(props);
         this.state = this.props.globalState;
         this.persistConfig = { persist: false, key: "root", ...this.props.persistConfig };
-        if (this.persistConfig.persist && this.persistConfig.load ) {
-           this.persistConfig.load();
+        if (this.persistConfig.persist && this.persistConfig.load) {
+            this.persistConfig.load();
         }
     }
 
@@ -39,15 +38,15 @@ class StoreProvider extends Component {
                 if (this.persistConfig.whitelist !== undefined) {
                     let toSave = undefined;
                     this.persistConfig.whitelist.forEach((key) => {
-                        if ( u[key] != undefined){
-                            if ( toSave == undefined){
+                        if (u[key] != undefined) {
+                            if (toSave == undefined) {
                                 toSave = {};
                             }
                             toSave[key] = u[key];
                         }
                     });
 
-                    if ( toSave != undefined ){
+                    if (toSave != undefined) {
                         this.persistConfig.store(toSave);
                     }
                 }
@@ -69,5 +68,7 @@ class StoreProvider extends Component {
     }
 }
 
-export { withStoreProvider };
-export default StoreProvider
+
+
+export { StoreProvider, withStoreProvider }
+
