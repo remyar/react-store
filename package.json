@@ -1,0 +1,32 @@
+{
+  "name": "@remyar/react-store",
+  "version": "0.0.1",
+  "author": "Remy ARNAUDIN <remy.arnaudin@wanadoo.fr>",
+  "license": "MIT",
+  "description": "Store Provider for react",
+  "homepage": "https://github.com/remyar/react-store",
+  "main": "dist/index.js",
+    "scripts": {
+      "build": "microbundle-crl --no-compress --format modern,cjs"
+    },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/remyar/react-store"
+  },
+  "bugs": {
+    "url": "https://github.com/remyar/react-store/issues"
+  },
+  "keywords": [
+    "store",
+    "react",
+    "provider"
+  ],
+  "peerDependencies": {
+    "microbundle-crl": "^0.13.11",
+    "react": ">=18.0.0"
+  },
+  "devDependencies": {
+    "microbundle-crl": "^0.13.11",
+    "react": ">=18.0.0"
+  }
+}
