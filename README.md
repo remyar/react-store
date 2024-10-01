@@ -13,7 +13,7 @@ The lib exposes the following methods:
 
 ### StoreProvider
 ```javascript
-import StoreProvider from '@remyar/react-store';
+import { StoreProvider } from '@remyar/react-store';
 ...
 
  root.render(
