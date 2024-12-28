@@ -13,12 +13,12 @@ The lib exposes the following methods:
 
 ### StoreProvider
 ```javascript
-import { StoreProvider } from '@remyar/react-store';
+import  StoreProvider from '@remyar/react-store';
 ...
 
  root.render(
         <React.Fragment>
-            <StoreProvider extra={{}} globalState={{}} persistConfig={{}}>
+            <StoreProvider globalState={{}} >
                  <App /> --> Your Application
             </StoreProvider>
         </React.Fragment>
@@ -27,16 +27,16 @@ import { StoreProvider } from '@remyar/react-store';
 
 ### withStoreProvider
 ``` javascript
-import { withStoreProvider } from '@remyar/react-store';
+import { useStore } from '@remyar/react-store';
 ...
 
 function YourReactComponent(props) {
 
-    const globalState = props.globalState
+    const [globalState, dispatch] = useStore();
     
     return <div>
         <MenuItem onClick={() => {
-                await props.dispatch(actions.database.get());
+                await dispatch(actions.database.get());
             }}>
         </MenuItem>
         </div>
