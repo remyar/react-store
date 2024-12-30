@@ -1,15 +1,13 @@
 {
   "name": "@remyar/react-store",
-  "version": "1.0.0",
+  "version": "2.0.2",
   "author": "Remy ARNAUDIN <remy.arnaudin@wanadoo.fr>",
   "license": "MIT",
   "description": "Store Provider for react",
   "homepage": "https://github.com/remyar/react-store",
-  "main": "dist/index.js",
-  "source": "src/index.js",
-    "scripts": {
-      "build": "microbundle --no-compress --jsx React.createElement --jsxFragment React.Fragment --jsxImportSource react --globals react/jsx-runtime=jsx"
-    },
+  "main": "src/index.js",
+  "scripts": {
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/remyar/react-store"
@@ -23,11 +21,9 @@
     "provider"
   ],
   "peerDependencies": {
-    "microbundle": "^0.15.1",
-    "react": ">=18.0.0"
+    "react": ">=18.0.0",
+    "react-dom": ">=18.0.0"
   },
   "devDependencies": {
-    "microbundle": "^0.15.1",
-    "react": ">=18.0.0"
   }
 }
