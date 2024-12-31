@@ -1,0 +1,6 @@
+/node_modules
+.scripts
+/src
+babel.config.esm.js
+babel.config.js
+rollup.config.mjs
