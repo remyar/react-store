@@ -1,4 +1,5 @@
 import React, { createContext, useReducer, useContext } from 'react';
+import _ from 'lodash';
 
 const StoreContext = createContext();
 
@@ -30,7 +31,7 @@ function useStore() {
 
             obj = await _process();
 
-            obj = { ...globalState, ...obj };
+            obj = _.merge(globalState, obj);
         }
 
         dispatch(obj == undefined ? updater : obj);

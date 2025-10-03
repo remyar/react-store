@@ -1,6 +1,6 @@
 {
   "name": "@remyar/react-store",
-  "version": "2.0.8",
+  "version": "2.0.9",
   "author": "Remy ARNAUDIN <remy.arnaudin@wanadoo.fr>",
   "license": "MIT",
   "description": "Store Provider for react",
@@ -45,6 +45,7 @@
     "rollup": "^4.52.4",
     "rollup-plugin-clear": "^2.0.7",
     "rollup-plugin-terser": "^7.0.2",
+    "lodash": "^4.17.21",
     "zx": "^8.8.4"
   }
 }
