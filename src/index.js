@@ -1,4 +1,4 @@
-import React , { createContext , useReducer, useContext } from 'react';
+import React, { createContext, useReducer, useContext } from 'react';
 
 const StoreContext = createContext();
 
@@ -7,7 +7,7 @@ const reducer = (oldState, newState) => {
 }
 
 function StoreProvider(props) {
-    return <StoreContext.Provider value={useReducer(reducer, { ...(props.globalState || {}) }) } >
+    return <StoreContext.Provider value={useReducer(reducer, { ...(props.globalState || {}) })} >
         {props.children}
     </StoreContext.Provider>;
 };
@@ -29,6 +29,8 @@ function useStore() {
             }
 
             obj = await _process();
+
+            obj = { ...globalState, ...obj };
         }
 
         dispatch(obj == undefined ? updater : obj);
